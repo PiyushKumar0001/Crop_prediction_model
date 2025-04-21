@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>enter details</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+     <style>
+
+</style>
+
+</head>
+<body>
+
+<div>
+    <h1>crop prediction model</h1>
+        <form action="/predict" method="post">
+            <label >Nitrogen:</label>
+                <input type="text" name="Nitrogen" required><br>
+            <label >Phosphorus:</label>
+                <input  type="text" name="Phosphorus" required><br>
+            <label >Potassium:</label>
+                <input type="text" name="Potassium" required><br>
+            <label >Temperature:</label>
+                <input type="text" name="Temperature:" required><br>
+            <label >humidity:</label>
+                <input type="text" name="humidity" required><br>
+            <label >ph:</label>
+                <input type="text" name="ph" required><br>
+            <label >rainfall:</label>
+                <input type="text" name="rainfall" required><br>
+
+            <button type="submit"  class="btn btn-primary btn-block btn-large">predict</button>
+        </form>
+        <h1 id="predi">
+        {{prediction_text}}
+        </h1>
+
+    </div>
+
+</body>
+</html>
